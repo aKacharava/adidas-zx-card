@@ -6,13 +6,14 @@ const card = document.querySelector('.card');
 const sneaker = document.querySelector('.sneaker img');
 const info = document.querySelector('.info');
 
+const moveIntensity = 30;
 
 // Moving animation event
 cardContainer.addEventListener('mousemove', (e) => {
-    let xAxis = (window.innerWidth / 2 - e.pageX) / 30;
-    let yAxis = (window.innerHeight / 2 - e.pageY) / 30;
+    let xAxis = (window.innerWidth / 2 - e.pageX) / moveIntensity;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / moveIntensity;
 
-    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${-yAxis}deg)`;
 });
 
 /// Animate In
